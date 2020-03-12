@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 3d992fe1e5de38c479d72302ce896db2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sen
+  fontNames:
+  - Sen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1ac5e7a71e565d541a5af13ba22fa9a4, type: 3}
+  - {fileID: 12800000, guid: 432febad08ddb7a46abb74c735fcb0e5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
