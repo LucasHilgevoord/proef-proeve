@@ -16,6 +16,9 @@ public class CollectableGUI : MonoBehaviour
     [SerializeField]
     private Text plankAmountText;
 
+    [SerializeField]
+    private Animator animatorInv;
+
     private TempInventory inventory;
 
     private void Start()
@@ -28,5 +31,18 @@ public class CollectableGUI : MonoBehaviour
     {
         hamerAmountText.text = inventory.currentHamers.ToString() + "/" + hamersNeeded.ToString();
         plankAmountText.text = inventory.currentPlanks.ToString() + "/" + planksNeeded.ToString();
+    }
+
+    public void OpenInventory()
+    {
+        if(!animatorInv.GetBool("Inventory"))
+        {
+            animatorInv.SetBool("Inventory", true);
+        }
+        else
+        {
+            animatorInv.SetBool("Inventory", false);
+        }
+
     }
 }
