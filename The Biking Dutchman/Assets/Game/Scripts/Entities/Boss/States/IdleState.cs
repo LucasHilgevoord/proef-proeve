@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class IdleState : State
 {
-    public override void Start(StateMachine behaviour, object[] args = null)
+    new void Start()
     {
-        //throw new System.NotImplementedException();
+        base.Start();
     }
 
-    public override void Update()
-    {
-        //throw new System.NotImplementedException();
-    }
-
-    public override void End()
+    public override void OnDestroy()
     {
         //throw new System.NotImplementedException();
     }

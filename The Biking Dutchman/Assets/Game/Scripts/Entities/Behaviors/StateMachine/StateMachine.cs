@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class StateID
 {
     public string stateName;
-    public State stateScript;
-    public StateID(string name, State script)
+    public Type stateScript;
+    public StateID(string name, Type script)
     {
         stateName = name;
         stateScript = script;
@@ -15,20 +16,15 @@ public class StateID
 
 public class StateMachine : MonoBehaviour
 {
-    private State currentState = null;
-    private Dictionary<string, State> states = new Dictionary<string, State>();
-
-    protected void Update()
-    {
-        if (currentState != null) currentState.Update();
-    }
+    private Component currentState = null;
+    private Dictionary<string, Type> states = new Dictionary<string, Type>();
 
     /// <summary>
     /// Add a state to the StateMachine.
     /// </summary>
     /// <param name="id"></param>
     /// <param name="state"></param>
-    protected void AddState(string id, State state)
+    protected void AddState(string id, Type state)
     {
         states.Add(id, state);
     }
@@ -40,13 +36,12 @@ public class StateMachine : MonoBehaviour
     /// <param name="args"></param>
     public void ChangeState(string id, object[] args = null)
     {
-        if (currentState != null) currentState.End();
+        Destroy(currentState);
         if (!states.ContainsKey(id))
         {
             currentState = null;
             return;
         }
-        currentState = states[id];
-        currentState.Start(this, args);
+        currentState = this.gameObject.AddComponent(states[id]);
     }
 }
