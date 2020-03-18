@@ -1,0 +1,90 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_arm
+  rotate: true
+  xy: 242, 887
+  size: 109, 326
+  orig: 109, 326
+  offset: 0, 0
+  index: -1
+L_leg
+  rotate: true
+  xy: 131, 767
+  size: 118, 563
+  orig: 118, 563
+  offset: 0, 0
+  index: -1
+R_arm
+  rotate: true
+  xy: 570, 887
+  size: 109, 328
+  orig: 109, 328
+  offset: 0, 0
+  index: -1
+R_leg
+  rotate: true
+  xy: 2, 647
+  size: 118, 542
+  orig: 118, 572
+  offset: 0, 0
+  index: -1
+bike_chain
+  rotate: false
+  xy: 2, 848
+  size: 127, 127
+  orig: 127, 127
+  offset: 0, 0
+  index: -1
+bike_frame
+  rotate: false
+  xy: 314, 218
+  size: 682, 390
+  orig: 682, 390
+  offset: 0, 0
+  index: -1
+bike_wheel
+  rotate: false
+  xy: 2, 335
+  size: 310, 310
+  orig: 310, 310
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 546, 610
+  size: 140, 244
+  orig: 140, 244
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 696, 752
+  size: 133, 205
+  orig: 133, 205
+  offset: 0, 0
+  index: -1
+stang_01
+  rotate: true
+  xy: 72, 977
+  size: 19, 83
+  orig: 19, 83
+  offset: 0, 0
+  index: -1
+stang_02
+  rotate: true
+  xy: 157, 977
+  size: 19, 83
+  orig: 19, 83
+  offset: 0, 0
+  index: -1
+trapper
+  rotate: false
+  xy: 2, 978
+  size: 68, 18
+  orig: 68, 18
+  offset: 0, 0
+  index: -1

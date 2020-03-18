@@ -25,7 +25,7 @@ public class FadeCamera : MonoBehaviour
             overlay.color = new Color(overlay.color.r, overlay.color.b, overlay.color.g, alpha);
             yield return null;
         }
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneID);
     }
 
     public IEnumerator FadeOut()
@@ -38,7 +38,7 @@ public class FadeCamera : MonoBehaviour
             overlay.color = new Color(overlay.color.r, overlay.color.b, overlay.color.g, alpha);
             yield return null;
         }
-        if (alpha == 0)
+        if (alpha < 0)
         {
             overlay.gameObject.SetActive(false);
         }

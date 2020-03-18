@@ -6,7 +6,7 @@ public class BossHealth : MonoBehaviour
 {
     private StateMachine controller;
 
-    private float maxHealth = 30000;
+    private float maxHealth = 20000;
     private float currentHealth;
 
     private float maxBarX = 2.09f;

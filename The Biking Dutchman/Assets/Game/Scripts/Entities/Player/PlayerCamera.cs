@@ -8,7 +8,7 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField]
     private Transform target;
     private Vector3 offset;
-    private float followSpeed = 0.1f;
+    private float followSpeed = 1f;
 
     void Start()
     {
