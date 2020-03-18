@@ -5,10 +5,11 @@ using UnityEngine;
 public class BossController : StateMachine
 {
     public StateID[] states = {
-        new StateID("AWAKE", typeof(AwakingState)),
-        new StateID("IDLE", typeof(IdleState)),
-        new StateID("ATTACK", typeof(AttackState)),
-        new StateID("DODGE", typeof(DodgeState)),
+        new StateID("AWAKE", typeof(AwakingState), null),
+        new StateID("IDLE", typeof(IdleState), null),
+        new StateID("ATTACK", typeof(AttackState), null),
+        new StateID("DODGE", typeof(DodgeState), null),
+        new StateID("DEAD", typeof(DeadState), null),
     };
 
     void Start()

@@ -7,17 +7,26 @@ public class StateID
 {
     public string stateName;
     public Type stateScript;
-    public StateID(string name, Type script)
+    public object[] args;
+    public StateID(string name, Type script, object[] args = null)
     {
         stateName = name;
         stateScript = script;
+        args = this.args;
     }
+}
+
+[Serializable]
+public class AudioLists
+{
+    public AudioClip[] clips;
 }
 
 public class StateMachine : MonoBehaviour
 {
-    private Component currentState = null;
     private Dictionary<string, Type> states = new Dictionary<string, Type>();
+    private State currentState = null;
+    public AudioLists[] audioList;
 
     /// <summary>
     /// Add a state to the StateMachine.
@@ -34,7 +43,7 @@ public class StateMachine : MonoBehaviour
     /// </summary>
     /// <param name="id"></param>
     /// <param name="args"></param>
-    public void ChangeState(string id, object[] args = null)
+    public void ChangeState(string id)
     {
         Destroy(currentState);
         if (!states.ContainsKey(id))
@@ -42,6 +51,6 @@ public class StateMachine : MonoBehaviour
             currentState = null;
             return;
         }
-        currentState = this.gameObject.AddComponent(states[id]);
+        currentState = this.gameObject.AddComponent(states[id]) as State;
     }
 }

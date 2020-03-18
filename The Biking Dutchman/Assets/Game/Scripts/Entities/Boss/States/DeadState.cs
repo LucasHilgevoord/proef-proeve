@@ -2,29 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DodgeState : State
+public class DeadState : State
 {
     private void OnEnable()
     {
         animationState.Complete += OnSpineAnimationComplete;
     }
 
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
-        animationState.SetAnimation(5, "war_cry_0" + Random.Range(1, 3), false);
+        animationState.TimeScale = -1;
+        animationState.SetAnimation(6, "transform", true);
     }
 
     public void OnSpineAnimationComplete(Spine.TrackEntry trackEntry)
     {
-        if (trackEntry.TrackIndex == 5)
+        if (trackEntry.TrackIndex == 6)
         {
-            controller.ChangeState("ATTACK");
+            StartCoroutine(Camera.main.GetComponent<FadeCamera>().FadeIn(0));
         }
     }
 
     public override void OnDestroy()
     {
-        animationState.ClearTracks();
         animationState.Complete -= OnSpineAnimationComplete;
     }
 }

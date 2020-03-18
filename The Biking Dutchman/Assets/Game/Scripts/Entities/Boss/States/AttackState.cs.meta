@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: e16697b99c315de43bd55d8f1a3e73c7
+guid: affebe201c60c144c99725f37465dfa0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - controller: {instanceID: 0}
+  - skeletonAnimation: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - hitPrefab: {fileID: 5506919393268157078, guid: 2cd2011040862c341bf98decd63e317d,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
